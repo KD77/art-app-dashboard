@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './home.css'
+import './post.css'
 
-class Home extends Component {
+class PostData extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,20 +27,23 @@ class Home extends Component {
   render() {
     const { name, description } = this.state;
     return (
-      <div>
-        <form onSubmit={this.submitHandler}>
+      <div className="container">
+        <form onSubmit={this.submitHandler} id="contact">
           <label>
-            <p>Title</p>
+            
             <input 
             type="text"
             name = "name" 
+            placeholder="Title of the Art"
             value={name}
             onChange={this.changeHandler}
             />
           </label>
           <label>
-            <p>Description</p>
+           
             <textarea name="description"
+            placeholder="Write the description of the Art here..."
+            required
              value={description}
             onChange={this.changeHandler}
             ></textarea>
@@ -55,4 +58,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default PostData;

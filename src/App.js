@@ -1,13 +1,14 @@
 import Navbar from "../src/components/navigation/navbar/navbar"
 import './App.css';
 import Login from "./components/Authentication/login/login";
-import Home from "./components/home/home"
+import PostData from "./components/post/post"
+import AllPost from "./components/home/allPost"
 function App() {
   return (
     <div className="App">
       <Navbar/>
      
-  <Home/>
+  <PostData/>
     </div>
   );
 }
