@@ -1,9 +1,8 @@
 .App {
   text-align: center;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
+  background-color: rgba(0, 0, 0, 0.04);
 }
-
-
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -21,5 +20,3 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-

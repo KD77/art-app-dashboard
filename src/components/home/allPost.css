@@ -1,12 +1,16 @@
 .data li {
-  color:#000;
+  color: #000;
   border: 1px solid #eee;
   border-radius: 2%;
   list-style: none;
   margin-bottom: 20px;
+  background-color: #fff;
+  width: 70%;
+  position: relative;
+  text-align: center;
+  align-items: center;
 }
-.container-data{
+.container-data {
   margin-left: 20px;
   margin-right: 20px;
-
 }
