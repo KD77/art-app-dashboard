@@ -11,9 +11,7 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/allPost">
-            <AllPost />
-          </Route>
+          <Route path="/allPost" render={(props) => <AllPost />} />
           <Route path="/post" render={(props) => <PostData {...props} />} />
           <Route path="/login" render={(props) => <Login {...props} />} />
           <Route path="/register" render={(props) => <Register {...props} />} />

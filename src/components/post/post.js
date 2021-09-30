@@ -23,7 +23,6 @@ class PostData extends Component {
     axios
       .post("https://art-restful-api.herokuapp.com/artPeices/", this.state)
       .then((response) => {
-        console.log(response);
         this.handleChange(e);
       })
       .catch((error) => {

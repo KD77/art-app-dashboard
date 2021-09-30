@@ -22,7 +22,6 @@ class Login extends Component {
     axios
       .post("https://art-restful-api.herokuapp.com/api/user/login", this.state)
       .then((response) => {
-        console.log(response);
         this.handleChange(e);
       })
       .catch((error) => {

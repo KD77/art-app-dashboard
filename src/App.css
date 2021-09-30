@@ -2,6 +2,7 @@
   text-align: center;
   font-family: "Times New Roman", Times, serif;
   background-color: rgba(0, 0, 0, 0.04);
+  height: 820px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

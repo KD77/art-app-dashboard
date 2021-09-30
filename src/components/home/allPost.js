@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { RiDeleteBin6Line } from "react-icons/ri";
 import "./allPost.css";
 
 class AllPost extends Component {
@@ -25,7 +26,7 @@ class AllPost extends Component {
       .then((response) => {
         const data = response.data;
         this.setState({ data: data });
-        //console.log(data)
+        
       })
       .catch((error) => {
         console.log(error);
@@ -33,6 +34,18 @@ class AllPost extends Component {
         this.setState({ errorMsg: " Error retreiving data" });
       });
   }
+  delete =(id, e)=> {
+    axios.delete(`https://art-restful-api.herokuapp.com/artPeices/${id}`).then(response=>{
+      console.log(response);
+      // updating the items
+      const data = this.state.data.filter(item => item._id !== id);  
+      console.log('deleted',data);
+      this.setState({ data: data})
+    })
+
+
+  }
+  
   render() {
     const { data, errorMsg } = this.state;
     return (
@@ -44,6 +57,11 @@ class AllPost extends Component {
                 <li key={data.id}>
                   {data.name}
                   {data.description}
+                  <div>
+                     <RiDeleteBin6Line id="delete-btn" onClick={(e)=>{this.delete(data._id)}}/>
+                  </div>
+                 
+                  
                 </li>
               ))
             : null}

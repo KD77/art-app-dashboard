@@ -25,7 +25,6 @@ class Register extends Component {
         this.state
       )
       .then((response) => {
-        console.log(response);
         this.handleChange(e);
       })
       .catch((error) => {
